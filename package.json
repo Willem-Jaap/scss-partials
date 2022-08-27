@@ -1,0 +1,16 @@
+{
+    "name": "scss-partials",
+    "version": "1.0.0",
+    "description": "Bundle of SCSS utilities & functions.",
+    "keywords": [
+        "scss",
+        "css",
+        "sass",
+        "partials",
+        "helpers",
+        "mixins",
+        "utilities"
+    ],
+    "author": "Willem-Jaap",
+    "license": "MIT"
+}
