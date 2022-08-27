@@ -1,0 +1,20 @@
+/* ============================= */
+//  Padding utility class.
+/* ============================= */
+.p {
+    @each $class, $size in $spacing-sizes {
+        &-#{$class} {
+            padding: $size + rem;
+        }
+        @each $p-class, $p-first, $p-second in $classes {
+            &-#{$p-class}-#{$class} {
+                @if ($p-first) {
+                    padding-#{$p-first}: $size + rem;
+                }
+                @if ($p-second) {
+                    padding-#{$p-second}: $size + rem;
+                }
+            }
+        }
+    }
+}

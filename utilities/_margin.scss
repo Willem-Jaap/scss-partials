@@ -1,0 +1,20 @@
+/* ============================= */
+//  Margin utility class.
+/* ============================= */
+.m {
+    @each $class, $size in $spacing-sizes {
+        &-#{$class} {
+            margin: $size + rem;
+        }
+        @each $m-class, $m-first, $m-second in $classes {
+            &-#{$m-class}-#{$class} {
+                @if ($m-first) {
+                    margin-#{$m-first}: $size + rem;
+                }
+                @if ($m-second) {
+                    margin-#{$m-second}: $size + rem;
+                }
+            }
+        }
+    }
+}
