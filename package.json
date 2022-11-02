@@ -1,6 +1,6 @@
 {
     "name": "scss-partials",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "description": "Bundle of SCSS utilities & functions.",
     "main": "_index.scss",
     "keywords": [
