@@ -1,12 +1,14 @@
-/* ============================= */
+@use "../settings/variables" as scss-partials;
+
+// =============================
 //  Margin utility class.
-/* ============================= */
+// =============================
 .m {
-    @each $class, $size in $spacing-sizes {
+    @each $class, $size in scss-partials.$spacing-sizes {
         &-#{$class} {
             margin: $size + rem;
         }
-        @each $m-class, $m-first, $m-second in $classes {
+        @each $m-class, $m-first, $m-second in scss-partials.$classes {
             &-#{$m-class}-#{$class} {
                 @if ($m-first) {
                     margin-#{$m-first}: $size + rem;
