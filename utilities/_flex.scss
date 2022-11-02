@@ -1,12 +1,10 @@
-/**
-    Flex Utility classes.
-    
-    Base class is .flex, which adds display flex.
-    This class is then modified using a modifier class.
+// Flex Utility classes.
 
-    When you want an item to have fleX, with a gap and aligned in the center, you can use the following:
-    class="flex flex--gap flex--justify-center"
- */
+// Base class is .flex, which adds display flex.
+// This class is then modified using a modifier class.
+
+// When you want an item to have fleX, with a gap and aligned in the center, you can use the following:
+// class="flex flex--gap flex--justify-center"
 
 .flex {
     display: flex;
@@ -16,7 +14,7 @@
     }
 
     &--justify-center {
-        justify-content: space-center;
+        justify-content: center;
     }
 
     &--justify-end {
@@ -40,7 +38,7 @@
     }
 
     &--align-center {
-        align-items: space-center;
+        align-items: center;
     }
 
     &--align-end {

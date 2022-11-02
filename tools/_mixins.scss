@@ -1,22 +1,24 @@
+@use "../settings/variables" as scss-partials;
+
 @mixin breakpoint($point) {
     @if $point == huge {
-        @media (max-width: $breakpoint-huge) {
+        @media (max-width: scss-partials.$breakpoint-huge) {
             @content;
         }
     } @else if $point == large {
-        @media (max-width: $breakpoint-large) {
+        @media (max-width: scss-partials.$breakpoint-large) {
             @content;
         }
     } @else if $point == medium {
-        @media (max-width: $breakpoint-medium) {
+        @media (max-width: scss-partials.$breakpoint-medium) {
             @content;
         }
     } @else if $point == small {
-        @media (max-width: $breakpoint-small) {
+        @media (max-width: scss-partials.$breakpoint-small) {
             @content;
         }
     } @else if $point == tiny {
-        @media (max-width: $breakpoint-tiny) {
+        @media (max-width: scss-partials.$breakpoint-tiny) {
             @content;
         }
     } @else {

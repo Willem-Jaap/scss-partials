@@ -1,16 +1,16 @@
-/* ============================= */
+// =============================
 //  Settings
-/* ============================= */
-@import "settings/variables";
+// =============================
+@use "settings/variables";
 
-/* ============================= */
+// =============================
 //  Tools
-/* ============================= */
-@import "tools/mixins";
+// =============================
+@use "tools/mixins";
 
-/* ============================= */
+// =============================
 //  Utilities
-/* ============================= */
-@import "utilities/flex";
-@import "utilities/margin";
-@import "utilities/padding";
+// =============================
+@use "utilities/flex";
+@use "utilities/margin";
+@use "utilities/padding";
