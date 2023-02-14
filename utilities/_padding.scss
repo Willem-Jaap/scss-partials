@@ -1,22 +1,20 @@
-@use "../settings/variables" as scss-partials;
+@use "../settings/variables" as *;
 
-// =============================
-//  Padding utility class.
-// =============================
-.p {
-    @each $class, $size in scss-partials.$spacing-sizes {
-        &-#{$class} {
-            padding: $size + rem;
-        }
-        @each $p-class, $p-first, $p-second in scss-partials.$classes {
-            &-#{$p-class}-#{$class} {
-                @if ($p-first) {
-                    padding-#{$p-first}: $size + rem;
-                }
-                @if ($p-second) {
-                    padding-#{$p-second}: $size + rem;
+@mixin generate-padding-utility-classes($spacing-sizes, $classes) {
+    @each $class, $size in $spacing-sizes {
+        @each $p-class, $p-first, $p-second in $classes {
+            .p-#{$p-class}-#{$class} {
+                padding-#{$p-first}: #{$size}rem;
+                @if $p-second {
+                    padding-#{$p-second}: #{$size}rem;
                 }
             }
         }
+
+        .p-#{$class} {
+            padding: #{$size}rem;
+        }
     }
 }
+
+@include generate-padding-utility-classes($spacing-sizes, $classes);

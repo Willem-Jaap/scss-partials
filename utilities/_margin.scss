@@ -1,22 +1,20 @@
-@use "../settings/variables" as scss-partials;
+@use "../settings/variables" as *;
 
-// =============================
-//  Margin utility class.
-// =============================
-.m {
-    @each $class, $size in scss-partials.$spacing-sizes {
-        &-#{$class} {
-            margin: $size + rem;
-        }
-        @each $m-class, $m-first, $m-second in scss-partials.$classes {
-            &-#{$m-class}-#{$class} {
-                @if ($m-first) {
-                    margin-#{$m-first}: $size + rem;
-                }
-                @if ($m-second) {
-                    margin-#{$m-second}: $size + rem;
+@mixin generate-margin-utility-classes($spacing-sizes, $classes) {
+    @each $class, $size in $spacing-sizes {
+        @each $m-class, $m-first, $m-second in $classes {
+            .m-#{$m-class}-#{$class} {
+                margin-#{$m-first}: #{$size}rem;
+                @if $m-second {
+                    margin-#{$m-second}: #{$size}rem;
                 }
             }
         }
+
+        .m-#{$class} {
+            margin: #{$size}rem;
+        }
     }
 }
+
+@include generate-margin-utility-classes($spacing-sizes, $classes);
