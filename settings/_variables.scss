@@ -30,4 +30,5 @@ $spacing-sizes: (
     "10" 10
 ) !default;
 
+// The first item in the list is the string in the class, the second ones are the values for the margin and padding.
 $classes: ("h" "left" "right", "v" "top" "bottom", "t" "top", "r" "right", "b" "bottom", "l" "left") !default;

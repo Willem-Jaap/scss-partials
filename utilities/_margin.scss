@@ -5,18 +5,20 @@
 // =============================
 .m {
     @each $class, $size in scss-partials.$spacing-sizes {
-        &-#{$class} {
-            margin: $size + rem;
-        }
         @each $m-class, $m-first, $m-second in scss-partials.$classes {
             &-#{$m-class}-#{$class} {
-                @if ($m-first) {
+                @if $m-first {
                     margin-#{$m-first}: $size + rem;
                 }
-                @if ($m-second) {
+
+                @if $m-second {
                     margin-#{$m-second}: $size + rem;
                 }
             }
+        }
+
+        &-#{$class} {
+            margin: $size + rem;
         }
     }
 }

@@ -5,18 +5,20 @@
 // =============================
 .p {
     @each $class, $size in scss-partials.$spacing-sizes {
-        &-#{$class} {
-            padding: $size + rem;
-        }
         @each $p-class, $p-first, $p-second in scss-partials.$classes {
             &-#{$p-class}-#{$class} {
-                @if ($p-first) {
+                @if $p-first {
                     padding-#{$p-first}: $size + rem;
                 }
-                @if ($p-second) {
+
+                @if $p-second {
                     padding-#{$p-second}: $size + rem;
                 }
             }
+        }
+
+        &-#{$class} {
+            padding: $size + rem;
         }
     }
 }
