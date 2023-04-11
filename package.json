@@ -13,5 +13,12 @@
         "utilities"
     ],
     "author": "Willem-Jaap",
-    "license": "MIT"
+    "license": "MIT",
+    "devDependencies": {
+        "stylelint": "^15.4.0",
+        "stylelint-config-pixel": "^1.3.0"
+    },
+    "stylelint": {
+        "extends": "stylelint-config-pixel"
+    }
 }
